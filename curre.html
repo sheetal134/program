@@ -1,0 +1,65 @@
+<html>
+<head>
+<title> CUURRENCY CONVERTER</title>
+<style>
+#rect
+   {
+   width:400px;
+   height:150px;
+   margin:0px auto;
+   border:3px solid blue;
+   }
+   h1
+   {
+   text-align:center;
+   }
+   table
+   {
+   margin:0px auto;
+   }
+   </style>
+   <script>
+        function calculate()
+                {
+ 
+                x=document.getElementById("secondary currency").value;
+                 if (x == "")
+                 {
+                      document.getElementById("base currency").value="";
+                        }
+                else
+                  {
+   
+                   document.getElementById("base currency").value=x*0.020;
+  
+                         }
+                  }
+   
+   </script>
+  
+</head>
+<body >
+<div id="rect">
+<h1 > <b>Currency Converter </h1></b>
+<table >
+<tr>
+<td><input id="secondary currency" type="text" size="13"></td>
+<td> <select id="from"  onchange="calculate();">
+<option value="SGD" > singapore dollar(SGD)</option>
+<option value="INR"selected >INDIAN RUPEE(INR)</option>
+</select>
+</td>
+</tr>
+<tr>
+<td><input id="base currency" type="text" size="13" oninput="calculate();" ></td>
+<td><select id= "to" onchange=" calculate();">
+<option value="SGD"selected > singapore dollar(SGD)</option>
+<option value="INR" >INDIAN RUPEE(INR)</option>
+</select>
+
+</td>
+</tr>
+</div>
+</table>
+</body>
+</html>
